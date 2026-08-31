@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{产品名称}} · 产品证据拆解</title>
+<style>
+:root{--bg:#faf8f6;--panel:#fff;--soft:#f5f1f4;--text:#29252b;--muted:#6f6872;--line:#e5dde2;--accent:#d92d85;--blue:#207fbd;--green:#137a5c;--yellow:#9a6508;--red:#c83d4d;--purple:#7056c4;--shadow:0 14px 38px rgba(65,42,57,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% -5%,rgba(217,45,133,.10),transparent 28%),radial-gradient(circle at 95% 8%,rgba(32,127,189,.07),transparent 24%),var(--bg);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.65}.wrap{max-width:1460px;margin:auto;padding:30px 24px 80px}h1{font-size:clamp(34px,5vw,62px);line-height:1.06;letter-spacing:-.04em;margin:0 0 14px}h2{font-size:28px;margin:52px 0 18px}h3{margin:0 0 9px}p{color:#514b54}.hero,.card,.table-wrap,.diagram{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow)}.hero{padding:40px;border-radius:26px;background:linear-gradient(135deg,rgba(217,45,133,.10),rgba(32,127,189,.04) 60%),#fff}.lead{max-width:900px;font-size:18px}.meta,.legend{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.pill,.badge{display:inline-block;border-radius:999px;font-size:12px;font-weight:800}.pill{padding:6px 10px;border:1px solid var(--line);background:var(--soft)}.badge{padding:3px 8px}.confirmed{color:var(--green);background:#e9f7f2}.inferred{color:var(--yellow);background:#fff4d7}.recommended{color:var(--purple);background:#f0edff}.unknown{color:var(--red);background:#fff0f1}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:20px;border-radius:18px}.table-wrap{overflow:auto;border-radius:18px}table{border-collapse:collapse;min-width:1080px;width:100%;font-size:13px}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line)}th{position:sticky;top:0;background:#f0e9ee;z-index:1}tbody tr:nth-child(even){background:#fcfafb}.diagram{padding:20px;border-radius:18px;overflow:auto}.evidence{color:#b91f69;font-weight:800}.notice{padding:16px 18px;border-left:4px solid var(--yellow);background:#fff5dc;border-radius:0 14px 14px 0}.footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}@media(max-width:850px){.wrap{padding:16px 13px 56px}.hero{padding:25px}.grid{grid-template-columns:1fr}}@media print{body{background:#fff}.wrap{max-width:none}.hero,.card,.table-wrap,.diagram{box-shadow:none}table{font-size:9px;min-width:0}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="hero">
+  <span class="badge confirmed">证据驱动产品拆解</span>
+  <h1>{{产品名称}}</h1>
+  <p class="lead">{{一句话执行摘要}}</p>
+  <div class="meta"><span class="pill">{{产品分类}}</span><span class="pill">{{证据数量}}</span><span class="pill">{{检查日期}}</span></div>
+</header>
+
+<section><h2>1. 查看范围与证据边界</h2><div class="grid"><article class="card"><h3>已查看</h3><p>{{查看范围}}</p></article><article class="card"><h3>证据缺口</h3><p>{{证据缺口}}</p></article></div></section>
+
+<section><h2>2. 产品分类与拆解重心</h2><div class="card"><p>{{分类依据与分析重点}}</p></div></section>
+
+<section><h2>3. 证据等级</h2><div class="legend"><span class="badge confirmed">【已确认】</span><span class="badge inferred">【合理推断】</span><span class="badge recommended">【建议设计】</span><span class="badge unknown">【未知】</span></div></section>
+
+<section><h2>4. 模式专项分析</h2><div class="notice">{{模式专项内容}}</div></section>
+
+<section><h2>5. 用户层—技术层—模型层—数据层</h2><div class="table-wrap"><table><thead><tr><th>步骤</th><th>用户层</th><th>技术层</th><th>模型层</th><th>数据层</th><th>证据</th></tr></thead><tbody><tr><td>{{步骤}}</td><td>{{用户层内容}}</td><td>{{技术层内容}}</td><td>{{模型层内容}}</td><td>{{数据层内容}}</td><td class="evidence">{{证据编号}}</td></tr></tbody></table></div></section>
+
+<section><h2>6. 关键流程与关系图</h2><div class="diagram">{{流程或关系图}}</div></section>
+
+<section><h2>7. 状态冲突、风险与机会</h2><div class="grid"><article class="card"><h3>当前问题</h3><p>{{当前问题}}</p></article><article class="card"><h3>产品机会</h3><p>{{建议设计}}</p></article></div></section>
+
+<section><h2>8. 规则—证据追溯</h2><div class="table-wrap"><table><thead><tr><th>结论/组件/规则</th><th>等级</th><th>原因</th><th>证据</th><th>置信度</th></tr></thead><tbody><tr><td>{{结论}}</td><td>{{证据等级}}</td><td>{{判断原因}}</td><td class="evidence">{{证据编号}}</td><td>{{置信度}}</td></tr></tbody></table></div></section>
+
+<section><h2>9. 最值得继续验证的问题</h2><div class="card"><ol><li>{{验证问题}}</li></ol></div></section>
+
+<footer class="footer">{{报告页脚}}</footer>
+</main></body></html>
